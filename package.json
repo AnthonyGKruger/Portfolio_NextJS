@@ -21,5 +21,8 @@
     "react-responsive": "^9.0.2",
     "react-use-downloader": "^1.2.4",
     "tachyons": "^4.12.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0"
   }
 }
