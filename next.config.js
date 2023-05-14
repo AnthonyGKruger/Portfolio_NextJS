@@ -1,10 +1,3 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   reactStrictMode: true,
-// }
-
-
-
 module.exports = {
   webpack: (config, options) =>
   {
@@ -16,5 +9,3 @@ module.exports = {
       return config
   },
 }
-
-// module.exports = nextConfig

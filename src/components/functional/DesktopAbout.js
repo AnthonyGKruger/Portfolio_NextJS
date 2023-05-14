@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import classes from "@/styles/About.module.css";
 import image from "@/media/AnthonyIllustrated.jpeg";
@@ -31,7 +30,7 @@ const DesktopAbout = () => {
 					environments. When not coding, I'm exploring new technologies or
 					enjoying my time with family and friends. I'm excited about the
 					opportunities ahead and look forward to connecting with like-minded
-					professionals.
+					professionals. Hello!!!!
 				</p>
 			</div>
 		</div>
