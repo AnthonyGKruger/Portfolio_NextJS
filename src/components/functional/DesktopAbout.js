@@ -30,7 +30,7 @@ const DesktopAbout = () => {
 					environments. When not coding, I'm exploring new technologies or
 					enjoying my time with family and friends. I'm excited about the
 					opportunities ahead and look forward to connecting with like-minded
-					professionals. Hello!!!!
+					professionals. 
 				</p>
 			</div>
 		</div>
