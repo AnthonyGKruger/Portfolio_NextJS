@@ -1,0 +1,13 @@
+.banner{
+  transition: all 1s;
+  position:sticky !important;
+  z-index: 99999999 !important;
+  top:3rem;
+}
+
+.action {
+  transition: all 2s;
+}
+.action:hover{
+  transform: rotate(360deg);
+}

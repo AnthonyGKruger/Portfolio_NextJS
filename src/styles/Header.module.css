@@ -1,0 +1,37 @@
+.header {
+	display: initial;
+	position: sticky;
+	z-index: 999999 !important;
+
+}
+.name {
+	color: #0f2740;
+}
+.title {
+	color: #a4804b;
+}
+
+.link:hover {
+	color: #f1d6b0;
+	background-color: #354f6b;
+}
+
+.link {
+	color: #354f6b;
+}
+
+.nav {
+	border-color: #624111;
+	position: sticky !important;
+	top: 0;
+	transition: all 2s ease-out;
+	z-index: 99999999 !important;
+}
+
+.image {
+	display: flex;
+	justify-content: space-evenly;
+	/* align-items: center;
+	margin-left:auto; */
+}
+ 

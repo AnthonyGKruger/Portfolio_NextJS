@@ -1,0 +1,22 @@
+.workItem{
+  border-color: #76899D;
+}
+
+.company{
+  color: #213C58 ;
+}
+
+.details{
+  background-color: #f1f3f5;
+  color: #624111;
+  border-color: #624111;
+}
+
+.detailsContainer{
+  border-color: #624111;
+}
+
+.comments{
+  background-color: #354F6B;
+  color: #F1D6B0;
+}
