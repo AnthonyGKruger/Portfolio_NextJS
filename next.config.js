@@ -5,16 +5,16 @@ const nextConfig = {
 
 
 
-module.exports = {
-  webpack: (config, options) =>
-  {
-      config.module.rules.push({
-          test: /\.pdf$/i,
-          type: 'asset/source'
-      })
+// module.exports = {
+//   webpack: (config, options) =>
+//   {
+//       config.module.rules.push({
+//           test: /\.pdf$/i,
+//           type: 'asset/source'
+//       })
 
-      return config
-  },
-}
+//       return config
+//   },
+// }
 
 module.exports = nextConfig
