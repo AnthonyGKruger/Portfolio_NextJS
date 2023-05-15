@@ -12,7 +12,7 @@ export const validateName = (str) => {
 };
 
 export const validateString = (str) => {
-	let regex = /^[a-zA-Z0-9,!?&@\s]+$/;
+	let regex = /^[a-zA-Z0-9,''""!?&@\s]+$/;
 	return regex.test(str);
 };
 

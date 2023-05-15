@@ -8,6 +8,12 @@ import afrikaansAnimationData from "@/media/lotties/SouthAfricanFlag.json";
 const Languages = () => {
 	return (
 		<>
+			<Head>
+				<title>Anthony Kruger's Portfolio</title>
+				<meta name="description" content="Anthony Kruger's Portfolio" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/favicon.png" />
+			</Head>
 			<Heading animationData={headingAnimationData} content="Languages" />
 			<article className="cf avenir w-50 center mt4">
 				<div className="fl w-100 w-50-ns tc">

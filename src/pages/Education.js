@@ -1,7 +1,7 @@
-import  Link from "next/link";
+import Link from "next/link";
 import Heading from "@/components/UI/Heading";
 import EducationItem from "@/components/functional/EducationItem";
-import animationData from "@/media/lotties/Education.json"
+import animationData from "@/media/lotties/Education.json";
 
 const educationData = [
 	{
@@ -20,7 +20,7 @@ const educationData = [
 		dateTo: "August 2022",
 		comments: [
 			<Link
-				style={{ "textDecoration": "none", color: "#F1D6B0" }}
+				style={{ textDecoration: "none", color: "#F1D6B0" }}
 				href="https://ude.my/UC-1d4f7fd3-ec81-4317-b99d-5747cbcd16ac"
 				target="_blank"
 			>
@@ -37,7 +37,7 @@ const educationData = [
 		dateTo: "December 2018",
 		comments: [
 			<Link
-				style={{ "textDecoration": "none", color: "#F1D6B0" }}
+				style={{ textDecoration: "none", color: "#F1D6B0" }}
 				href="https://courses.edx.org/certificates/fa03b6b8c0a04312945e938093948cd2"
 				target="_blank"
 			>
@@ -54,7 +54,7 @@ const educationData = [
 		dateTo: "November 2018",
 		comments: [
 			<Link
-				style={{ "textDecoration": "none", color: "#F1D6B0" }}
+				style={{ textDecoration: "none", color: "#F1D6B0" }}
 				href="https://courses.edx.org/certificates/4a21f40f94dc4d5da93426422982fc1b"
 				target="_blank"
 			>
@@ -88,7 +88,13 @@ const mappedEducation = educationData.map((qualification) => {
 const Education = () => {
 	return (
 		<>
-			<Heading content="Qualifications" animationData={animationData}/>
+			<Head>
+				<title>Anthony Kruger's Portfolio</title>
+				<meta name="description" content="Anthony Kruger's Portfolio" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/favicon.png" />
+			</Head>
+			<Heading content="Qualifications" animationData={animationData} />
 			{mappedEducation}
 		</>
 	);

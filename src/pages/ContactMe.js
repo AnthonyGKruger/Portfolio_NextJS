@@ -9,7 +9,7 @@ import ResumeRequest from "@/components/UI/ResumeRequest";
 import { useDispatch, useSelector } from "react-redux";
 import { contactMeActions } from "@/store/contactMe-slice";
 import { useRouter } from "next/router";
-import animationData from "@/media/lotties/ContactMe.json"
+import animationData from "@/media/lotties/ContactMe.json";
 
 const ContactMe = () => {
 	const router = useRouter();
@@ -20,12 +20,12 @@ const ContactMe = () => {
 
 	const [isMobile, setIsMobile] = useState(false);
 
-	const checkForMobile = useMediaQuery({ query: `(max-width: 900px)` });
+	// const checkForMobile = useMediaQuery({ query: `(max-width: 500px)` });
+	const checkForMobile = useMediaQuery({ query: `(max-width: 768px)` });
 
 	useEffect(() => {
 		setIsMobile(checkForMobile);
 	}, [isMobile]);
-
 
 	const lottieDimensions = isMobile ? 300 : 400;
 
@@ -55,7 +55,7 @@ const ContactMe = () => {
 					"ezdev_smtp_service",
 					"ezdev_contact_me",
 					formData,
-					"0PBBlj4pgSRIws7hs"
+					process.env.EMAIL_JS_SECURE_TOKEN
 				)
 				.then(
 					(result) => {
@@ -100,6 +100,12 @@ const ContactMe = () => {
 
 	return (
 		<>
+			<Head>
+				<title>Anthony Kruger's Portfolio</title>
+				<meta name="description" content="Anthony Kruger's Portfolio" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/favicon.png" />
+			</Head>
 			{contactFormState.error && (
 				<Banner
 					bgColor="bg-light-red"
@@ -115,9 +121,10 @@ const ContactMe = () => {
 				/>
 			)}
 			<div
-				className={`dt center pv5-m pv3-ns ${isMobile ? "w6 ph3" : "w-100"}`}
+				// className={`dt center pv5-m pv3-ns w-75 ph3" `}
+				className={` center pv5-m pv3-ns ${isMobile ? " ph3" : "w-100 dt"}`}
 			>
-				<div className={`db dtc-ns v-mid-ns ${isMobile ? "w-100" : "w-50"}`}>
+				<div className={`db  ${isMobile ? "w-100" : "w-50 v-mid-ns dtc-ns"}`}>
 					<Lottie
 						loop
 						play
@@ -127,18 +134,18 @@ const ContactMe = () => {
 							marginLeft: "auto",
 							marginRight: "auto",
 						}}
-						animationData={
-							animationData
-						}
+						animationData={animationData}
 					/>
 				</div>
 				<div
-					className={`db dtc-ns v-mid ph2 pr0-ns pl3-ns ${
-						isMobile ? "w-100 " : "w-90 center"
+					className={`db  v-mid ph2 pr0-ns pl3-ns ${
+						isMobile ? "w-100" : "w-90 center dtc-ns"
 					}`}
 				>
 					<article
-						className={`${isMobile ? "pa1" : "pa4"} lh-copy black-80 avenir`}
+						className={`${
+							isMobile ? "pa1 center" : "pa4"
+						} lh-copy black-80 avenir`}
 					>
 						<form
 							ref={form}
@@ -159,7 +166,7 @@ const ContactMe = () => {
 
 									<input
 										// value={contactFormState.from_name}
-										className={`pa2 input-reset ba br2 w-100 measure  ${
+										className={`pa2 input-reset ba br2 w-100   ${
 											contactFormState.inputHasError.nameHasError
 												? classes.inputError
 												: classes.input
@@ -181,7 +188,7 @@ const ContactMe = () => {
 
 									<input
 										value={contactFormState.reply_to || ""}
-										className={`pa2 input-reset ba br2 w-100 measure ${
+										className={`pa2 input-reset ba br2 w-100  ${
 											contactFormState.inputHasError.emailHasError
 												? classes.inputError
 												: classes.input
@@ -203,7 +210,7 @@ const ContactMe = () => {
 
 									<input
 										value={contactFormState.company || ""}
-										className={`pa2 input-reset ba br2 w-100 measure  ${
+										className={`pa2 input-reset ba br2 w-100   ${
 											contactFormState.inputHasError.companyHasError
 												? classes.inputError
 												: classes.input
@@ -226,7 +233,7 @@ const ContactMe = () => {
 										value={contactFormState.comments || ""}
 										id="comments"
 										name="comments"
-										className={`pa2 input-reset ba br2 w-100 measure db border-box hover-black ba mb2 ${
+										className={`pa2 input-reset ba br2 w-100  db border-box hover-black ba mb2 ${
 											contactFormState.inputHasError.commentsHasError
 												? classes.inputError
 												: classes.input

@@ -1,9 +1,9 @@
 import Heading from "@/components/UI/Heading";
 import WorkItem from "@/components/functional/WorkItem";
 import animationData from "@/media/lotties/workExperience.json";
+import Head from "next/head";
 
 const WorkExperience = () => {
-	
 	const workData = [
 		{
 			id: "w1",
@@ -79,6 +79,12 @@ const WorkExperience = () => {
 
 	return (
 		<>
+			<Head>
+				<title>Anthony Kruger's Portfolio</title>
+				<meta name="description" content="Anthony Kruger's Portfolio" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/favicon.png" />
+			</Head>
 			<Heading animationData={animationData} content="Work Experience" />
 			{mappedWork}
 		</>

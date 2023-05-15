@@ -2,10 +2,9 @@ import PortfolioItem from "@/components/functional/PortfolioItem";
 import Heading from "@/components/UI/Heading";
 import mumbiLogo from "@/media/mumbi-logo.png";
 import dptsLogo from "@/media/DPTS.png";
-import animationData from "@/media/lotties/Portfolio.json"
+import animationData from "@/media/lotties/Portfolio.json";
 
 const Portfolio = () => {
-
 	const portfolioData = [
 		{
 			id: "p1",
@@ -35,10 +34,18 @@ const Portfolio = () => {
 		);
 	});
 	return (
-		<article>
-			<Heading animationData={animationData} content="Portfolio" />
-			<div className="cf ma2">{portfolioItems}</div>
-		</article>
+		<>
+			<Head>
+				<title>Anthony Kruger's Portfolio</title>
+				<meta name="description" content="Anthony Kruger's Portfolio" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/favicon.png" />
+			</Head>
+			<article>
+				<Heading animationData={animationData} content="Portfolio" />
+				<div className="cf ma2">{portfolioItems}</div>
+			</article>
+		</>
 	);
 };
 

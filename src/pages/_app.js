@@ -7,12 +7,28 @@ import { Provider } from "react-redux";
 import store from "@/store/index";
 import Companies from "@/components/UI/Companies";
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 
 export default function App({ Component, pageProps }) {
 	const { asPath } = useRouter();
 
 	return (
 		<Provider store={store}>
+			<Script
+				strategy="lazyOnload"
+				src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+			/>
+
+			<Script strategy="lazyOnload">
+				{`
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+				page_path: window.location.pathname,
+				});
+		`}
+			</Script>
 			<Header />
 			<Banner
 				bgColor="bg-red"

@@ -5,33 +5,44 @@ import animationData from "@/media/lotties/ThankYou.json";
 import { useState, useEffect } from "react";
 
 const ThankYou = () => {
-
 	const [isMobile, setIsMobile] = useState(false);
 	const [isDesktop, setIsDesktop] = useState(false);
 
 	const checkForMobile = useMediaQuery({ query: `(max-width: 760px)` });
-	const checkForDesktop = useMediaQuery({ query: `(max-width: 1000px)`})
+	const checkForDesktop = useMediaQuery({ query: `(max-width: 1000px)` });
 
 	useEffect(() => {
 		setIsMobile(checkForMobile);
 		setIsDesktop(checkForDesktop);
 	}, [isMobile, isDesktop]);
 
-
-	const lottieDimensions = isMobile? 300 : 400
+	const lottieDimensions = isMobile ? 300 : 400;
 
 	return (
 		<>
-		<Lottie
-					loop
-					play
-					style={{ width: lottieDimensions, height: lottieDimensions, marginLeft: "auto", marginRight: "auto" }}
-					animationData={animationData}
-				/>
-			
+			<Head>
+				<title>Anthony Kruger's Portfolio</title>
+				<meta name="description" content="Anthony Kruger's Portfolio" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/favicon.png" />
+			</Head>
+			<Lottie
+				loop
+				play
+				style={{
+					width: lottieDimensions,
+					height: lottieDimensions,
+					marginLeft: "auto",
+					marginRight: "auto",
+				}}
+				animationData={animationData}
+			/>
+
 			<article className="tc ph4 avenir">
 				<p
-					className={`${isDesktop ? "f1" : "f2"} f2-m f1-l fw2  mv3 ${classes.text}`}
+					className={`${isDesktop ? "f1" : "f2"} f2-m f1-l fw2  mv3 ${
+						classes.text
+					}`}
 				>
 					Awesome!
 				</p>
