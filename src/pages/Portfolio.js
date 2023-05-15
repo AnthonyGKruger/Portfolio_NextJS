@@ -3,6 +3,7 @@ import Heading from "@/components/UI/Heading";
 import mumbiLogo from "@/media/mumbi-logo.png";
 import dptsLogo from "@/media/DPTS.png";
 import animationData from "@/media/lotties/Portfolio.json";
+import Head from "next/head";
 
 const Portfolio = () => {
 	const portfolioData = [

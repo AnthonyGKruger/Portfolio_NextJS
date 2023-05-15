@@ -2,6 +2,7 @@ import Heading from "@/components/UI/Heading";
 import WorkItem from "@/components/functional/WorkItem";
 import animationData from "@/media/lotties/workExperience.json";
 import Head from "next/head";
+import Head from "next/head";
 
 const WorkExperience = () => {
 	const workData = [

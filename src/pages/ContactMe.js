@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { contactMeActions } from "@/store/contactMe-slice";
 import { useRouter } from "next/router";
 import animationData from "@/media/lotties/ContactMe.json";
+import Head from "next/head";
 
 const ContactMe = () => {
 	const router = useRouter();

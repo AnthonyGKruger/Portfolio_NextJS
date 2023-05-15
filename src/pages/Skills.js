@@ -3,6 +3,7 @@ import Chart from "@/components/UI/Chart";
 import Heading from "@/components/UI/Heading";
 
 import animationData from "@/media/lotties/Skill.json";
+import Head from "next/head";
 
 const Skills = () => {
 	return (

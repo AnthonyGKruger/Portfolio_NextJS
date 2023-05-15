@@ -2,6 +2,7 @@ import Link from "next/link";
 import Heading from "@/components/UI/Heading";
 import EducationItem from "@/components/functional/EducationItem";
 import animationData from "@/media/lotties/Education.json";
+import Head from "next/head";
 
 const educationData = [
 	{

@@ -4,6 +4,7 @@ import Lottie from "react-lottie-player";
 import headingAnimationData from "@/media/lotties/Language.json";
 import englishAnimationData from "@/media/lotties/EnglishFlag.json";
 import afrikaansAnimationData from "@/media/lotties/SouthAfricanFlag.json";
+import Head from "next/head";
 
 const Languages = () => {
 	return (

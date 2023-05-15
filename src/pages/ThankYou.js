@@ -3,6 +3,7 @@ import classes from "@/styles/ThankYou.module.css";
 import { useMediaQuery } from "react-responsive";
 import animationData from "@/media/lotties/ThankYou.json";
 import { useState, useEffect } from "react";
+import Head from "next/head";
 
 const ThankYou = () => {
 	const [isMobile, setIsMobile] = useState(false);

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Lottie from "react-lottie-player";
 import { useMediaQuery } from "react-responsive";
 import animationData from "@/media/lotties/404.json";
+import Head from "next/head";
 
 const Error = () => {
 	const [isMobile, setIsMobile] = useState(false);
