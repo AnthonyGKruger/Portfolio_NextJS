@@ -140,7 +140,7 @@ const ContactMe = () => {
 				</div>
 				<div
 					className={`db  v-mid ph2 pr0-ns pl3-ns ${
-						isMobile ? "w-100" : "w-90 center dtc-ns"
+						isMobile ? "w-100" : "w-90 center dtc-ns "
 					}`}
 				>
 					<article
@@ -167,11 +167,11 @@ const ContactMe = () => {
 
 									<input
 										// value={contactFormState.from_name}
-										className={`pa2 input-reset ba br2 w-100   ${
+										className={`pa2 input-reset ba br2    ${
 											contactFormState.inputHasError.nameHasError
 												? classes.inputError
 												: classes.input
-										}`}
+										} ${isMobile ? "w-100" : "w-75"}`}
 										type="text"
 										name="from_name"
 										id="name"
@@ -189,11 +189,11 @@ const ContactMe = () => {
 
 									<input
 										value={contactFormState.reply_to || ""}
-										className={`pa2 input-reset ba br2 w-100  ${
+										className={`pa2 input-reset ba br2  ${
 											contactFormState.inputHasError.emailHasError
 												? classes.inputError
 												: classes.input
-										}`}
+										}  ${isMobile ? "w-100" : "w-75"}`}
 										type="email"
 										name="reply_to"
 										id="email"
@@ -211,11 +211,11 @@ const ContactMe = () => {
 
 									<input
 										value={contactFormState.company || ""}
-										className={`pa2 input-reset ba br2 w-100   ${
+										className={`pa2 input-reset ba br2 ${
 											contactFormState.inputHasError.companyHasError
 												? classes.inputError
 												: classes.input
-										}`}
+										} ${isMobile ? "w-100" : "w-75"}`}
 										type="text"
 										name="company"
 										id="company"
@@ -234,11 +234,11 @@ const ContactMe = () => {
 										value={contactFormState.comments || ""}
 										id="comments"
 										name="comments"
-										className={`pa2 input-reset ba br2 w-100  db border-box hover-black ba mb2 ${
+										className={`pa2 input-reset ba br2 db border-box hover-black ba mb2 ${
 											contactFormState.inputHasError.commentsHasError
 												? classes.inputError
 												: classes.input
-										}`}
+										} ${isMobile ? "w-100" : "w-75"}`}
 										aria-describedby="comment-desc"
 										onChange={inputChangeHandler}
 									></textarea>
