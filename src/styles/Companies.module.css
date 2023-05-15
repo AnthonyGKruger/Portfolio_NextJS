@@ -1,19 +1,10 @@
-.text{
-  color: #354F6B;
+.text {
+	color: #354f6b;
 }
 
-/* .image_container {
-
-  width: 100%;
-
- /* div {
-    position: unset !important;
-  } */
-/* }  */
-
-  .image {
-    object-fit: contain;
-    width: 100% !important;
-    position: relative !important;
-    height: unset !important;
-  }
+.image {
+	object-fit: contain;
+	width: 100% !important;
+	position: relative !important;
+	height: unset !important;
+}

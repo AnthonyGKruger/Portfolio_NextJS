@@ -5,9 +5,6 @@ import animationData from "@/media/lotties/ThankYou.json";
 import { useState, useEffect } from "react";
 
 const ThankYou = () => {
-	
-	// const isDesktop = useMediaQuery({ query: `(max-width: 1000px)` });
-	// const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
 
 	const [isMobile, setIsMobile] = useState(false);
 	const [isDesktop, setIsDesktop] = useState(false);

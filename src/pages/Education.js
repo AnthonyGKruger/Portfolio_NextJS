@@ -72,9 +72,6 @@ const educationData = [
 	},
 ];
 
-// const animationData =
-// 	"https://lottie.host/373b9689-1737-4678-aead-b3365f45c808/lJ8PjA8Ybj.json";
-
 const mappedEducation = educationData.map((qualification) => {
 	return (
 		<EducationItem

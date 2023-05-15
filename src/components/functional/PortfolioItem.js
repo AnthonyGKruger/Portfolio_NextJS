@@ -16,7 +16,6 @@ const PortfolioItem = ({ title, link, image, description }) => {
 	return (
 		<div
 			className={`fl outline black-30 avenir ${
-				// isMobile ? mobileClasses : desktopClasses
 				isTablet
 					? isMobile
 						? mobileClasses
@@ -26,7 +25,6 @@ const PortfolioItem = ({ title, link, image, description }) => {
 					: desktopClasses
 			}`}
 		>
-			{/* <div className="fl vh-25-l vh-30 vh-25-m w-25-m w-20-l pa3 outline black-30 ma2">  */}
 			<Link
 				href={link}
 				className={`db link dim tc  ${isMobile ? "mt3" : "mt1"}`}

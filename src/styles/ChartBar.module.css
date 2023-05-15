@@ -23,14 +23,6 @@
   transition: all 2s ease-out;
 }
 
-/* .chart_bar__label {
-  font-weight: bold;
-  font-size: 0.5rem;
-  text-align: center;
-  color: #624111;
-  font-size: 0.7rem;
-} */
-
 @media only screen and (max-width: 800px) {
 	.chart_bar {
 		max-width: 1rem !important;

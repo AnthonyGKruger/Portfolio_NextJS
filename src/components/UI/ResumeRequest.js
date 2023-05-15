@@ -29,18 +29,12 @@ const ResumeRequest = () => {
 			<h2 className={`f4 ${classes.text}`}>
 				Want to skip through all of this? Download my resume below:
 			</h2>
-			{/* <a
-				href={"@/media/Anthony_Gordon_Kruger.pdf"}
-				download="Anthony_Gordon_Kruger_Resume"
-			> */}
 			<button
 				className={`f6 grow br2 ph3 pv2 mb2 mr2 dib pointer input-reset ${classes.button}`}
 				onClick={saveFile}
-				// onClick={() => router.push("/")}
 			>
 				Download Resume
 			</button>
-			{/* </a> */}
 		</div>
 	);
 };

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Lottie from "react-lottie-player";
 import { useMediaQuery } from "react-responsive";
-// import classes from "@/styles/404.module.css"
 import animationData from "@/media/lotties/404.json";
 
 const Error = () => {
@@ -19,7 +18,6 @@ const Error = () => {
 		<section className="vh-90 avenir">
 			<div className="tc ph5 lh-copy ">
 				<Lottie
-					// className={classes.lottie}
 					loop
 					play
 					style={{
