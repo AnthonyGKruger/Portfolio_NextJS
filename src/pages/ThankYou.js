@@ -22,7 +22,7 @@ const ThankYou = () => {
 	return (
 		<>
 			<Head>
-				<title>Anthony Kruger's Portfolio</title>
+				<title>Anthony Kruger's Portfolio - Thank You</title>
 				<meta name="description" content="Anthony Kruger's Portfolio" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.png" />

@@ -4,7 +4,7 @@ export default function Document() {
 	return (
 		<Html lang="en">
 			<Head>
-			<title>Anthony Kruger's Portfolio</title>
+			<title>Anthony Kruger's Portfolio - Portfolio Page</title>
 			</Head>
 			<body>
 				<Main />

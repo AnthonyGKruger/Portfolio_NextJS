@@ -57,7 +57,7 @@ const WorkExperience = () => {
 			dateFrom: "January 2014",
 			dateTo: "April 2014",
 			comments: [
-				"Successfully handled all incoming emails",
+				"Successfully handled all incoming queries",
 				"Managed all IT support issues",
 			],
 		},
@@ -80,7 +80,7 @@ const WorkExperience = () => {
 	return (
 		<>
 			<Head>
-				<title>Anthony Kruger's Portfolio</title>
+				<title>Anthony Kruger's Portfolio - Work Experience</title>
 				<meta name="description" content="Anthony Kruger's Portfolio" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.png" />
