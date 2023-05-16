@@ -8,6 +8,7 @@ import store from "@/store/index";
 import Companies from "@/components/UI/Companies";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
+import CookieBanner from "@/components/UI/CookieBanner";
 
 export default function App({ Component, pageProps }) {
 	const { asPath } = useRouter();
@@ -42,6 +43,7 @@ export default function App({ Component, pageProps }) {
 				<Companies />
 			</main>
 			<Footer />
+			<CookieBanner/>
 		</Provider>
 	);
 }
