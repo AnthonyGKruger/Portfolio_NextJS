@@ -3,6 +3,7 @@ import Heading from "@/components/UI/Heading";
 import EducationItem from "@/components/functional/EducationItem";
 import animationData from "@/media/lotties/Education.json";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const educationData = [
 	{
@@ -87,10 +88,14 @@ const mappedEducation = educationData.map((qualification) => {
 });
 
 const Education = () => {
+	const { asPath } = useRouter();
 	return (
 		<>
 			<Head>
-				<title>Anthony Kruger's Portfolio - Qualifications</title>
+				<title>
+					Anthony Kruger's Portfolio - 
+					{asPath === "/" ? "About" : "Qualifications"}
+				</title>
 				<meta name="description" content="Anthony Kruger's Portfolio" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.png" />

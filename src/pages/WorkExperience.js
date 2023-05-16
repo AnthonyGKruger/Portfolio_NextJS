@@ -2,8 +2,10 @@ import Heading from "@/components/UI/Heading";
 import WorkItem from "@/components/functional/WorkItem";
 import animationData from "@/media/lotties/workExperience.json";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const WorkExperience = () => {
+	const { asPath } = useRouter();
 	const workData = [
 		{
 			id: "w1",
@@ -80,7 +82,10 @@ const WorkExperience = () => {
 	return (
 		<>
 			<Head>
-				<title>Anthony Kruger's Portfolio - Work Experience</title>
+				<title>
+					Anthony Kruger's Portfolio -{" "}
+					{asPath === "/" ? "About" : "Work Experience"}
+				</title>
 				<meta name="description" content="Anthony Kruger's Portfolio" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.png" />

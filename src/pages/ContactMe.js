@@ -14,9 +14,9 @@ import Head from "next/head";
 
 const ContactMe = () => {
 	const router = useRouter();
+	const { asPath } = useRouter();
 	const dispatch = useDispatch();
 	const contactFormState = useSelector((state) => state.contactMe);
-
 	const form = useRef();
 
 	const [isMobile, setIsMobile] = useState(false);
@@ -102,7 +102,9 @@ const ContactMe = () => {
 	return (
 		<>
 			<Head>
-				<title>Anthony Kruger's Portfolio - Contact Me</title>
+				<title>
+					Anthony Kruger's Portfolio - {asPath === "/" ? "About" : "Contact Me"}
+				</title>
 				<meta name="description" content="Anthony Kruger's Portfolio" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.png" />
