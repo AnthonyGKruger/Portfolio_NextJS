@@ -29,8 +29,9 @@ const CookieBanner = (props) => {
 			<div className="pa3 bt">
 				<p className={`f6 f5-ns lh-copy measure mv0`}>
 					This website uses cookies to improve the UI and UX. By using my
-					website you consent to all cookies & terms and conditions in accordance
-					with our <Link href={"@/pages/PrivacyPolicy"}>Privacy Policy</Link>.
+					website you consent to all cookies & terms and conditions in
+					accordance with our{" "}
+					<Link href={"/PrivacyPolicy"}>Privacy Policy</Link>.
 				</p>
 			</div>
 			<button
