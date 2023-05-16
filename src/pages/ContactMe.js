@@ -56,7 +56,7 @@ const ContactMe = () => {
 					"ezdev_smtp_service",
 					"ezdev_contact_me",
 					formData,
-					process.env.EMAIL_JS_SECURE_TOKEN
+					process.env.NEXT_PUBLIC_EMAIL_JS_SECURE_TOKEN
 				)
 				.then(
 					(result) => {
