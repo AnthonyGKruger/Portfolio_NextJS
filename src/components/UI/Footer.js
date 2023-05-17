@@ -1,19 +1,25 @@
-
 import logo from "@/media/ezdev-logo.png";
 import classes from "@/styles/Footer.module.css";
 import Image from "next/image";
+import Link from "next/link";
+import { useMediaQuery } from "react-responsive";
+import {useState, useEffect} from "react"
 
 const Footer = () => {
+
+	const [isMobile, setIsMobile] = useState(false);
+
+	const checkForMobile = useMediaQuery({ query: `(max-width: 760px)` });
+
+	useEffect(() => {
+		setIsMobile(checkForMobile);
+	}, [isMobile]);
+
 	return (
 		<footer className="pa4 pa5-l black-70 bt b--black-10 avenir">
 			<div className="mb4-l cf">
 				<a href="/" className={classes.image}>
-					<Image
-						src={logo}
-						alt="ez-dev logo"
-						height={100}
-						
-					/>
+					<Image src={logo} alt="ez-dev logo" height={100} />
 				</a>
 				<h1 className={`${classes.name} + tc mt2 mb0 fw1 f1`}>
 					Anthony Gordon Kruger
@@ -29,13 +35,17 @@ const Footer = () => {
 						anthony@ezdev.solutions
 					</a>
 				</div>
-	
 			</section>
 			<div className="dt dt--fixed w-100">
 				<div className="dn dtc-ns v-mid">
 					<p className="f7 black-70 dib pr3 mb3">
-						© EZdev Solutions (PTY) LTD 2023
+						© EZdev Solutions (PTY) LTD {new Date().getFullYear()}
 					</p>
+				</div>
+				<div className={`db dtc-ns black-70 tc v-mid ${isMobile? "mb4":""}`}>
+					<Link className={`link ${classes.link}`} href={"/PrivacyPolicy"}>
+						Privacy Policy.
+					</Link>
 				</div>
 				<div className="db dtc-ns black-70 tc tr-ns v-mid">
 					<a

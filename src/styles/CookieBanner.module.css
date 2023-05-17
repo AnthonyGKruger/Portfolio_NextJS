@@ -1,5 +1,23 @@
 .container {
 	bottom: 0;
 	position: fixed;
-  right:0;
+	right: 0px;
+	z-index: 99999999 !important;
+}
+
+.button {
+	background-color: #354f6b;
+	color: #f1d6b0;
+}
+
+.heading {
+	color: #354f6b;
+}
+
+.border {
+	border-color: #624111;
+}
+
+.link {
+	color: #354f6b;
 }

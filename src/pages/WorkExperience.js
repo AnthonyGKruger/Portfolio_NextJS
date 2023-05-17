@@ -6,6 +6,8 @@ import { useRouter } from "next/router";
 
 const WorkExperience = () => {
 	const { asPath } = useRouter();
+
+	fetch('api/workExperience.js')
 	const workData = [
 		{
 			id: "w1",
