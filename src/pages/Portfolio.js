@@ -4,36 +4,35 @@ import mumbiLogo from "@/media/mumbi-logo.png";
 import dptsLogo from "@/media/DPTS.png";
 import animationData from "@/media/lotties/Portfolio.json";
 import Head from "next/head";
+import { useState, useEffect } from "react";
 
 const Portfolio = () => {
-	const portfolioData = [
-		{
-			id: "p1",
-			title: "Mumbi Trust Administrators",
-			description: "SPA for Mumbi Trust Administrators.",
-			link: "https://mumbi.ezdev.solutions",
-			image: mumbiLogo,
-		},
-		{
-			id: "p2",
-			title: "Digital Payment Transformation Services",
-			description: "SPA for DPTS with ecommerce.",
-			link: "https://dpts.co.za",
-			image: dptsLogo,
-		},
-	];
 
-	const portfolioItems = portfolioData.map((portfolioItem) => {
-		return (
-			<PortfolioItem
-				key={portfolioItem.id}
-				title={portfolioItem.title}
-				description={portfolioItem.description}
-				link={portfolioItem.link}
-				image={portfolioItem.image}
-			/>
+	const [mappedPortfolioItems, setMappedPortfolioItems] = useState();
+
+	const fetchPortfolioData = async () => {
+		const response = await fetch("/api/portfolio");
+		const data = await response.json();
+
+		setMappedPortfolioItems(
+			data.map((portfolioItem) => {
+				return (
+					<PortfolioItem
+						key={portfolioItem.id}
+						title={portfolioItem.title}
+						description={portfolioItem.description}
+						link={portfolioItem.link}
+						image={portfolioItem.image}
+					/>
+				);
+			})
 		);
-	});
+	};
+
+	useEffect(() => {
+		fetchPortfolioData();
+	}, []);
+
 	return (
 		<>
 			<Head>
@@ -44,7 +43,7 @@ const Portfolio = () => {
 			</Head>
 			<article>
 				<Heading animationData={animationData} content="Portfolio" />
-				<div className="cf ma2">{portfolioItems}</div>
+				<div className="cf ma2">{mappedPortfolioItems}</div>
 			</article>
 		</>
 	);

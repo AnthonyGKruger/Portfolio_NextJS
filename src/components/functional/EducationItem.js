@@ -5,6 +5,7 @@ import calendarImage from "@/media/calendar.svg";
 import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const EducationItem = ({
 	institution,
@@ -12,8 +13,9 @@ const EducationItem = ({
 	dateFrom,
 	dateTo,
 	comments,
+	link,
 }) => {
-
+	
 	const [isMobile, setIsMobile] = useState(false);
 
 	const checkForMobile = useMediaQuery({ query: `(max-width: 760px)` });
@@ -21,23 +23,44 @@ const EducationItem = ({
 	useEffect(() => {
 		setIsMobile(checkForMobile);
 	}, [isMobile]);
-	
+
 	const mappedComments = comments.map((comment) => {
-		return (
-			<div key={comment} className={`f6 grow br2 ph3 pv2 mb2 mr2 dib ${classes.comments}`}>
+		if (link) {
+			return (
+				<div
+					key={link}
+					className={`f6 grow br2 ph3 pv2 mb2 mr2 dib ${classes.comments}`}
+				>
+					 <Link
+						style={{ textDecoration: "none", color: "#F1D6B0" }}
+	 					href={link}
+	 					target="_blank"
+	 				>
+						View Certificate
+	 				</Link> 
+				</div>
+			);
+		} else {
+			return(
+			<div
+				key={comment}
+				className={`f6 grow br2 ph3 pv2 mb2 mr2 dib ${classes.comments}`}
+			>
 				{comment}
-			</div>
-		);
+			</div>);
+		}
 	});
 
 	return (
 		<div
-			className={`center pl2 mt4 mb4 ${isMobile?"w-90":"w-70"} bl bw2 avenir ${classes.educationItem}`}
+			className={`center pl2 mt4 mb4 ${
+				isMobile ? "w-90" : "w-70"
+			} bl bw2 avenir ${classes.educationItem}`}
 		>
 			<div className={`bb f3 b ${classes.institution}`}>
 				<Image
-							style={{ width: "2rem", height: "2rem" }}
-							src={educationLocationImage}
+					style={{ width: "2rem", height: "2rem" }}
+					src={educationLocationImage}
 					alt="locations"
 				/>
 				{`  ${institution}`}

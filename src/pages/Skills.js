@@ -5,7 +5,7 @@ import Heading from "@/components/UI/Heading";
 import animationData from "@/media/lotties/Skill.json";
 import Head from "next/head";
 import { useRouter } from "next/router";
-
+ 
 const Skills = () => {
 	const { asPath } = useRouter();
 	return (
