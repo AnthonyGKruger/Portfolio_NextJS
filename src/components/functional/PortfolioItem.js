@@ -37,8 +37,8 @@ const PortfolioItem = ({ title, link, image, description }) => {
 					style={{ width: "70%", height: "70%" }}
 				/>
 				<dl className="mt2 f6 lh-copy">
-					<dt className="clip">Title</dt>
-					<dd className="ml0 black truncate w-100">{title}</dd>
+					{/* <dt className="clip">Title</dt>
+					<dd className="ml0 black truncate w-100">{title}</dd> */}
 					<dt className="clip">Description</dt>
 					<dd className="ml0 gray truncate w-100">{description}</dd>
 				</dl>

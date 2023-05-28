@@ -8,14 +8,14 @@ export default function handler(req, res) {
 		{
 			id: "p1",
 			title: "Mumbi Trust Administrators",
-			description: "SPA for Mumbi Trust Administrators.",
-			link: "https://mumbi.ezdev.solutions",
+			description: "NextJS application built using tailwind css and flowbite-react.",
+			link: "https://mumbi-trust-administrators.vercel.app",
 			image: mumbiLogo,
 		},
 		{
 			id: "p2",
 			title: "Digital Payment Transformation Services",
-			description: "SPA for DPTS with ecommerce.",
+			description: "Ecommerce app built using Wordpress and Woocommerce - (still under development.)",
 			link: "https://dpts.co.za",
 			image: dptsLogo,
 		},

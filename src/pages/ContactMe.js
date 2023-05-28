@@ -27,7 +27,7 @@ const ContactMe = () => {
 	useEffect(() => {
 		setIsMobile(checkForMobile);
 	}, [isMobile]);
-
+ 
 	const lottieDimensions = isMobile ? 300 : 400;
 
 	const onSubmitHandler = (event) => {
