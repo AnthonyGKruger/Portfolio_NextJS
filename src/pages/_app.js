@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
 	const { asPath } = useRouter();
 
 	return (
-		<Provider store={store}>
+		<>
 			<Script
 				strategy="lazyOnload"
 				src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
@@ -31,21 +31,22 @@ export default function App({ Component, pageProps }) {
 				});
 		`}
 			</Script>
-
-			<Header />
-			{/* <Banner
+			<Provider store={store}>
+				<Header />
+				{/* <Banner
 				bgColor="bg-red"
 				content="This website is currently being developed, some functionality may
 					not work as expected!"
 				textColor="white"
 			/> */}
-			<main className={asPath !== "/" ? "vh-auto mb5" : ""}>
-				<Component {...pageProps} />
-				<Analytics />
-				<Companies />
-			</main>
-			<Footer />
-			<CookieBanner />
-		</Provider>
+				<main className={asPath !== "/" ? "vh-auto mb5" : ""}>
+					<Component {...pageProps} />
+					<Analytics />
+					<Companies />
+				</main>
+				<Footer />
+				<CookieBanner />
+			</Provider>
+		</>
 	);
 }
