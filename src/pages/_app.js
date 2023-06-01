@@ -10,9 +10,35 @@ import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import CookieBanner from "@/components/UI/CookieBanner";
 import Head from "next/head";
+import { useState, useEffect } from "react";
 
 export default function App({ Component, pageProps }) {
 	const { asPath } = useRouter();
+	const [title, setTitle] = useState("Anthony Kruger's Portfolio");
+
+	useEffect(() => {
+		if (asPath === "/") {
+			setTitle(`Anthony Kruger's Portfolio - Home`);
+		} else if (asPath === "/Skills") {
+			setTitle(`Anthony Kruger's Portfolio - Skills`);
+		} else if (asPath === "/404") {
+			setTitle(`Anthony Kruger's Portfolio - Error`);
+		} else if (asPath === "/ContactMe") {
+			setTitle(`Anthony Kruger's Portfolio - Contact Us`);
+		} else if (asPath === "/WorkExperience") {
+			setTitle(`Anthony Kruger's Portfolio - Work Experience`);
+		} else if (asPath === "/Education") {
+			setTitle(`Anthony Kruger's Portfolio - Qualifications`);
+		} else if (asPath === "/Languages") {
+			setTitle(`Anthony Kruger's Portfolio - Languages`);
+		} else if (asPath === "/ThankYou") {
+			setTitle(`Anthony Kruger's Portfolio - Thank You`);
+		}else if (asPath === "/Portfolio") {
+			setTitle(`Anthony Kruger's Portfolio`);
+		}else if (asPath === "/PrivacyPolicy") {
+			setTitle(`Anthony Kruger's Portfolio - Privacy Policy`);
+		}
+	}, [title, asPath]);
 
 	return (
 		<>
@@ -32,6 +58,12 @@ export default function App({ Component, pageProps }) {
 		`}
 			</Script>
 			<Provider store={store}>
+				<Head>
+					<title>{title}</title>
+					<meta name="description" content="Anthony Kruger's Portfolio" />
+					<meta name="viewport" content="width=device-width, initial-scale=1" />
+					<link rel="icon" href="/favicon.png" />
+				</Head>
 				<Header />
 				{/* <Banner
 				bgColor="bg-red"

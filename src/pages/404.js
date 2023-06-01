@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Lottie from "react-lottie-player";
 import { useMediaQuery } from "react-responsive";
 import animationData from "@/media/lotties/404.json";
-import Head from "next/head";
 
 const Error = () => {
 	const [isMobile, setIsMobile] = useState(false);
@@ -17,12 +16,6 @@ const Error = () => {
 
 	return (
 		<>
-			<Head>
-				<title>Anthony Kruger's Portfolio - Error</title>
-				<meta name="description" content="Anthony Kruger's Portfolio" />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/favicon.png" />
-			</Head>
 			<section className="vh-90 avenir">
 				<div className="tc ph5 lh-copy ">
 					<Lottie

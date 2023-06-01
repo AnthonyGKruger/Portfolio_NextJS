@@ -1,8 +1,6 @@
-import Image from "next/image";
-import pic from "@/media/ezdev-logo.png";
-import Lottie from "react-lottie-player";
 import animationData from "@/media/lotties/key-lock.json";
 import Heading from "@/components/UI/Heading";
+
 const PrivacyPolicy = () => {
 	return (
 		<article className=" center avenir w-90">

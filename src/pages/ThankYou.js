@@ -3,7 +3,6 @@ import classes from "@/styles/ThankYou.module.css";
 import { useMediaQuery } from "react-responsive";
 import animationData from "@/media/lotties/ThankYou.json";
 import { useState, useEffect } from "react";
-import Head from "next/head";
 
 const ThankYou = () => {
 	const [isMobile, setIsMobile] = useState(false);
@@ -21,12 +20,6 @@ const ThankYou = () => {
 
 	return (
 		<>
-			<Head>
-				<title>Anthony Kruger's Portfolio - Thank You</title>
-				<meta name="description" content="Anthony Kruger's Portfolio" />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/favicon.png" />
-			</Head>
 			<Lottie
 				loop
 				play
