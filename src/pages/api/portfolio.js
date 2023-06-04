@@ -9,7 +9,7 @@ export default function handler(req, res) {
 			id: "p1",
 			title: "Mumbi Trust Administrators",
 			description: "NextJS application built using tailwind css and flowbite-react.",
-			link: "https://mumbi-trust-administrators.vercel.app",
+			link: "https://mumbi.co.za",
 			image: mumbiLogo,
 		},
 		{
