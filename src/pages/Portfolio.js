@@ -20,6 +20,7 @@ const Portfolio = () => {
 						description={portfolioItem.description}
 						link={portfolioItem.link}
 						image={portfolioItem.image}
+						id={portfolioItem.id}
 					/>
 				);
 			})
@@ -34,7 +35,7 @@ const Portfolio = () => {
 		<>
 			<article>
 				<Heading animationData={animationData} content="Portfolio" />
-				<div className="cf ma2">{mappedPortfolioItems}</div>
+				<div className="cf ml-auto mr-auto">{mappedPortfolioItems}</div>
 			</article>
 		</>
 	);
