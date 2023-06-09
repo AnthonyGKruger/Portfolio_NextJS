@@ -2,6 +2,7 @@
 import mumbiLogo from "@/media/mumbi-logo.png";
 import dptsLogo from "@/media/DPTS.png";
 import tlwLogo from "@/media/TLW-logo.jpg";
+import starWarsLogo from "@/media/star-wars-logo.svg"
 
 export default function handler(req, res) {
 	res.status(200).json([
@@ -21,6 +22,13 @@ export default function handler(req, res) {
 		},
 		{
 			id: "p3",
+			title: "Swapi E-commerce",
+			description: "E-commerce app built using NextJs and Tailwind CSS and the Swapi API, currently still under development.",
+			link: "https://swapi-ecommerce.vercel.app",
+			image: starWarsLogo,
+		},
+		{
+			id: "p4",
 			title: "Fan Catalogue",
 			description: "Fan Catalogue built using NextJs and Tailwind CSS.",
 			link: "https://tlwfans.vercel.app",
