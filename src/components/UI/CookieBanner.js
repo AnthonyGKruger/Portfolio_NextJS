@@ -52,7 +52,7 @@ const CookieBanner = (props) => {
 				<p className={`f6 f5-ns lh-copy measure mv0`}>
 					This website uses cookies to improve the UI and UX. By using my
 					website you consent to all cookies & terms and conditions in
-					accordance with my
+					accordance with my{" "}
 					<Link className={`link ${classes.link}`} href={"/PrivacyPolicy"}>
 						Privacy Policy.
 					</Link>
