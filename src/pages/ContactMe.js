@@ -39,7 +39,7 @@ const ContactMe = () => {
 			comments: form.current.comments.value,
 			reply_to: form.current.reply_to.value,
 		};
-
+ 
 		if (
 			!contactFormState.formHasErrors &&
 			contactFormState.from_name &&
